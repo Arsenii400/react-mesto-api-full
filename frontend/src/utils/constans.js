@@ -86,6 +86,6 @@ export const addCardForm = document.querySelector('.popup__form_type_add');
 export const updateAvatarForm = document.querySelector('.popup__form_type_updateAvatar');
 
 export const apiConfiguration = {
-  url:'http://localhost:3001',
+  url:'https://api.arsenii400.student.nomoredomains.icu',
   token: localStorage.getItem('token'),
 }

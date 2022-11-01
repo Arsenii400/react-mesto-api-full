@@ -1,4 +1,4 @@
-export const base_url = 'http://localhost:3001';
+export const base_url = 'https://api.arsenii400.student.nomoredomains.icu';
 
 export const register = (password, email) => {
   return fetch(
