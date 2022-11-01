@@ -1,0 +1,18 @@
+.profile__info {
+  display: grid;
+  grid-template-areas:
+    "avatar name button"
+    "avatar job-title .";
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 710px) {
+  .profile__info {
+    grid-template-areas:
+      "avatar avatar"
+      "name button"
+      "job-title job-title";
+    justify-items: center;
+    margin-right: 0;
+  }
+}

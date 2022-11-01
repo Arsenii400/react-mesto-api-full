@@ -1,0 +1,9 @@
+.header__data_type_reg {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 5px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}

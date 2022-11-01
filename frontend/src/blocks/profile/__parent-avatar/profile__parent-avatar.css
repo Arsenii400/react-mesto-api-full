@@ -1,0 +1,9 @@
+.profile__parent-avatar {
+  grid-area: avatar;
+}
+
+.profile__parent-avatar:hover {
+  background-image: url(../../../images/Vector.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}

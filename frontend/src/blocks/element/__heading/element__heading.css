@@ -1,0 +1,11 @@
+.element__heading {
+  color: black;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.20;
+  padding: 0;
+  margin: 25px 0 26px 21px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

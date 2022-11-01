@@ -1,0 +1,5 @@
+.header__data {
+  display: flex;
+  flex-direction: row;
+
+}

@@ -1,0 +1,4 @@
+.login__questionContainer {
+  display: flex;
+  flex-direction: row;
+}

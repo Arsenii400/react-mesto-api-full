@@ -1,0 +1,17 @@
+.popup__updateAvatar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 430px;
+  min-height: 272px;
+  border-radius: 10px;
+  position: relative;
+}
+
+@media screen and (max-width: 710px) {
+  .popup__updateAvatar-container {
+    width: 282px;
+    min-height: 272px;
+  }
+}

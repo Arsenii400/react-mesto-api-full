@@ -1,0 +1,4 @@
+.element__trash_hidden {
+  position: absolute;
+  visibility: hidden;
+}

@@ -1,0 +1,11 @@
+.header__data_type_exit {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 5px;
+  color: #A9A9A9;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: black;
+  border: 0;
+}
