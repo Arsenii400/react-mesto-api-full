@@ -191,7 +191,7 @@ function App() {
             />
           </Route>
           <Route path="/sign-in">
-            <Login handleLogin={handleLogin} />
+            <Login handleLogin={tokenCheck} />
           </Route>
 
           <ProtectedRoute exact path="/"
