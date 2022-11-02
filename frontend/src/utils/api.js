@@ -13,13 +13,11 @@ export class Api {
     return Promise.reject(`Что-то пошло не так: ${res.status}`);
   }
 
-  _getToken = () => localStorage.getItem('token');
-
   getInitialCards() {
     return fetch(`${this._url}/cards`, {
       method: 'GET',
       headers: {
-        "Authorization": `Bearer ${this._getToken}`,
+        "Authorization": `Bearer ${this._token}`,
         'Content-Type': 'application/json'
       }
     })
@@ -30,7 +28,7 @@ export class Api {
     return fetch(`${this._url}/cards`, {
       method: 'POST',
       headers: {
-        "Authorization": `Bearer ${this._getToken}`,
+        "Authorization": `Bearer ${this._token}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -45,7 +43,7 @@ export class Api {
     return fetch(`${this._url}/cards/${id}`, {
       method: 'DELETE',
       headers: {
-        "Authorization": `Bearer ${this._getToken}`,
+        "Authorization": `Bearer ${this._token}`,
       }
     })
       .then(this._checkAnswer)
@@ -55,7 +53,7 @@ export class Api {
     return fetch(`${this._url}/users/me`, {
       method: 'GET',
       headers: {
-        "Authorization": `Bearer ${this._getToken}`,
+        "Authorization": `Bearer ${this._token}`,
         'Content-Type': 'application/json'
       }
     })
@@ -66,7 +64,7 @@ export class Api {
     return fetch(`${this._url}/users/me`, {
       method: 'PATCH',
       headers: {
-        "Authorization": `Bearer ${this._getToken}`,
+        "Authorization": `Bearer ${this._token}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -81,7 +79,7 @@ export class Api {
     return fetch(`${this._url}/cards/${cardId}/likes`, {
       method: _isLiked ? 'DELETE' : 'PUT',
       headers: {
-        "Authorization": `Bearer ${this._getToken}`,
+        "Authorization": `Bearer ${this._token}`,
         'Content-Type': 'application/json'
       }
     })
@@ -92,7 +90,7 @@ export class Api {
     return fetch(`${this._url}/users/me/avatar`, {
       method: 'PATCH',
       headers: {
-        "Authorization": `Bearer ${this._getToken}`,
+        "Authorization": `Bearer ${this._token}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
