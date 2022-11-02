@@ -77,7 +77,7 @@ function App() {
       }
     };
     tokenCheck();
-  }, []);
+  }, [history]);
 
   useEffect(() => {
     // console.log(`loggedIn = ${loggedIn}`);
