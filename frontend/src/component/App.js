@@ -40,28 +40,27 @@ function App() {
   function signOut() {
     localStorage.removeItem('token');
     history.push('/sign-in');
-  }
-
-  const tokenCheck = () => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      auth.getContent(token)
-        .then((res) => {
-          if (res) {
-            setEmail(res.email);
-            setLoggedIn(true);
-            history.push('/');
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        })
-    }
-  }
+   }
 
   useEffect(() => {
+    const tokenCheck = () => {
+      const token = localStorage.getItem('token');
+      if (token) {
+        auth.getContent(token)
+          .then((res) => {
+            if (res) {
+              setEmail(res.email);
+              setLoggedIn(true);
+              history.push('/');
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+      }
+    }
     tokenCheck();
-  }, []);
+  }, [history]);
 
   useEffect(() => {
     // console.log(`loggedIn = ${loggedIn}`);
