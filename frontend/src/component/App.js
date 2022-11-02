@@ -60,7 +60,7 @@ function App() {
 
   useEffect(() => {
     tokenCheck();
-  }, [])
+  })
 
   useEffect(() => {
     if (loggedIn) {
@@ -191,7 +191,7 @@ function App() {
             />
           </Route>
           <Route path="/sign-in">
-            <Login handleLogin={tokenCheck} />
+            <Login handleLogin={handleLogin} />
           </Route>
 
           <ProtectedRoute exact path="/"
