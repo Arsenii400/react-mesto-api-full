@@ -34,6 +34,7 @@ function App() {
 
   const handleLogin = () => {
     setLoggedIn(true);
+    console.log('При логине должен сработать хендллогин');
   }
 
   function signOut() {
