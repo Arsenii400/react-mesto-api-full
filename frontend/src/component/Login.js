@@ -10,7 +10,6 @@ const Login = (props) => {
   const history = useHistory();
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     auth.authorize(password, email)
       .then((data) => {
         if (data.token) {

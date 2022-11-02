@@ -39,8 +39,9 @@ function App() {
 
   function signOut() {
     localStorage.removeItem('token');
+    setLoggedIn(false);
     history.push('/sign-in');
-   }
+  }
 
   useEffect(() => {
     const tokenCheck = () => {
@@ -64,7 +65,7 @@ function App() {
 
   useEffect(() => {
     console.log(`loggedIn = ${loggedIn}`);
-    if (loggedIn === true) {
+    if (loggedIn) {
       api.getInitialCards()
         .then((res) => {
           setCards(res.card);
@@ -78,7 +79,7 @@ function App() {
 
   useEffect(() => {
     console.log(`loggedIn = ${loggedIn}`);
-    if (loggedIn === true) {
+    if (loggedIn) {
       api.getProfileInfo()
         .then((res) => {
           setCurrentUser(res);
