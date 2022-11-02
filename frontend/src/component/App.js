@@ -34,6 +34,7 @@ function App() {
 
   const handleLogin = () => {
     setLoggedIn(true);
+    console.log(`loggedIn = ${loggedIn}`);
   }
 
   function signOut() {
@@ -41,29 +42,45 @@ function App() {
     history.push('/sign-in');
   }
 
-  const tokenCheck = () => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      auth.getContent(token)
-        .then((res) => {
-          if (res) {
-            setEmail(res.email);
-            setLoggedIn(true);
-            history.push('/');
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        })
-    }
-  }
+  // const tokenCheck = () => {
+  //   const token = localStorage.getItem('token');
+  //   if (token) {
+  //     auth.getContent(token)
+  //       .then((res) => {
+  //         if (res) {
+  //           setEmail(res.email);
+  //           setLoggedIn(true);
+  //           history.push('/');
+  //         }
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       })
+  //   }
+  // }
 
   useEffect(() => {
+    const tokenCheck = () => {
+      const token = localStorage.getItem('token');
+      if (token) {
+        auth.getContent(token)
+          .then((res) => {
+            if (res) {
+              setEmail(res.email);
+              setLoggedIn(true);
+              history.push('/');
+            }
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+      }
+    };
     tokenCheck();
-  }, [])
+  }, []);
 
   useEffect(() => {
-    console.log(`loggedIn = ${loggedIn}`);
+    // console.log(`loggedIn = ${loggedIn}`);
     if (loggedIn) {
       api.getInitialCards()
         .then((res) => {
@@ -77,7 +94,7 @@ function App() {
   );
 
   useEffect(() => {
-    console.log(`loggedIn = ${loggedIn}`);
+    // console.log(`loggedIn = ${loggedIn}`);
     if (loggedIn) {
       api.getProfileInfo()
         .then((res) => {
