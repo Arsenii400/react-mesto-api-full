@@ -34,6 +34,7 @@ function App() {
 
   const handleLogin = () => {
     setLoggedIn(true);
+    history.push('/');
     console.log('При логине должен сработать хендллогин');
   }
 
@@ -62,7 +63,7 @@ function App() {
 
   useEffect(() => {
     tokenCheck();
-  })
+  }, [])
 
   useEffect(() => {
     if (loggedIn) {
