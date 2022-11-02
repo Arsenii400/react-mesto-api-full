@@ -63,7 +63,8 @@ function App() {
   }, [history]);
 
   useEffect(() => {
-    if (loggedIn) {
+    console.log(`loggedIn = ${loggedIn}`);
+    if (loggedIn === true) {
       api.getInitialCards()
         .then((res) => {
           setCards(res.card);
@@ -76,7 +77,8 @@ function App() {
   );
 
   useEffect(() => {
-    if (loggedIn) {
+    console.log(`loggedIn = ${loggedIn}`);
+    if (loggedIn === true) {
       api.getProfileInfo()
         .then((res) => {
           setCurrentUser(res);
