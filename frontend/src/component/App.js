@@ -33,8 +33,6 @@ function App() {
   const [email, setEmail] = useState('');
 
   const handleLogin = () => {
-    setLoggedIn(true);
-    history.push('/');
     tokenCheck();
     console.log('При логине должен сработать хендллогин');
   }
