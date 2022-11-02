@@ -60,7 +60,7 @@ function App() {
 
   useEffect(() => {
     tokenCheck();
-  })
+  }, [])
 
   useEffect(() => {
     if (loggedIn) {
