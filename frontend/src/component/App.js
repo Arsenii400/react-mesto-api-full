@@ -63,7 +63,6 @@ function App() {
   }, [history]);
 
   useEffect(() => {
-    // console.log(`loggedIn = ${loggedIn}`);
     if (loggedIn) {
       api.getInitialCards()
         .then((res) => {
@@ -77,7 +76,6 @@ function App() {
   );
 
   useEffect(() => {
-    // console.log(`loggedIn = ${loggedIn}`);
     if (loggedIn) {
       api.getProfileInfo()
         .then((res) => {
