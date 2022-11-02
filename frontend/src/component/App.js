@@ -47,6 +47,7 @@ function App() {
       auth.getContent(token)
         .then((res) => {
           if (res) {
+            console.log('При перезагрузке сработал токен чек');
             setEmail(res.email);
             setLoggedIn(true);
             history.push('/')
