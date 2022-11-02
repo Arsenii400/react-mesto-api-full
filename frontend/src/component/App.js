@@ -34,7 +34,6 @@ function App() {
 
   const handleLogin = () => {
     setLoggedIn(true);
-    console.log('При логине должен сработать хендллогин');
   }
 
   function signOut() {
@@ -48,7 +47,6 @@ function App() {
       auth.getContent(token)
         .then((res) => {
           if (res) {
-            console.log('При перезагрузке сработал токен чек');
             setEmail(res.email);
             setLoggedIn(true);
             history.push('/');
@@ -65,6 +63,7 @@ function App() {
   }, [])
 
   useEffect(() => {
+    console.log(`loggedIn = ${loggedIn}`);
     if (loggedIn) {
       api.getInitialCards()
         .then((res) => {
@@ -78,6 +77,7 @@ function App() {
   );
 
   useEffect(() => {
+    console.log(`loggedIn = ${loggedIn}`);
     if (loggedIn) {
       api.getProfileInfo()
         .then((res) => {
