@@ -15,6 +15,7 @@ const Login = (props) => {
       .then((data) => {
         if (data.token) {
           props.handleLogin();
+          history.push('/');
         } else {
           console.log('Некорректно заполнено одно из полей');
         }

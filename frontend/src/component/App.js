@@ -51,7 +51,7 @@ function App() {
             console.log('При перезагрузке сработал токен чек');
             setEmail(res.email);
             setLoggedIn(true);
-            history.push('/')
+            history.push('/');
           }
         })
         .catch((err) => {
