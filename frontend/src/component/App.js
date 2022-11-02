@@ -83,6 +83,7 @@ function App() {
       api.getProfileInfo()
         .then((res) => {
           setCurrentUser(res);
+          setEmail(res.email);
         })
         .catch((err) => {
           console.log(err);
