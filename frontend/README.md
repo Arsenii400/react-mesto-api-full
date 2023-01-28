@@ -39,11 +39,12 @@
 1. Установите [VS Code](https://code.visualstudio.com/Download "Visual Studio Code")
 2. Установите [Node.js](https://nodejs.org/en/download/ "Node.js")
 ###### Развёртывание
-1. Клонируйте репозиторий на свой компьютер через командную строку
-2. Скачайте Node.js с оф. сайта https://nodejs.org/en/download/ и установите.
-3. Создайте файл package.json с помощью команды npm init через командную строку.
-4. Запустите проект с помощью команды npm run start через командную строку.
+1. Клонируйте репозиторий на свой компьютер через командную строку.
+2. Установите зависимости с помощью команды npm install.
+3. Запустите проект с помощью команды npm run start.
 
 
 #### Статус
 Завершён
+
+Посмотреть можно здесь: https://arsenii400.student.nomoredomains.icu
