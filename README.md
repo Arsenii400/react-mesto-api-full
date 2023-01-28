@@ -5,10 +5,8 @@
 
 Сервис Mesto это интерактивная страница, куда можно добавлять фотографии, удалять их и ставить лайки.
 
-#### Статус 
-
+#### Статус  
 Завершён
 
-Frontend https://arsenii400.student.nomoredomains.icu
-
+Frontend https://arsenii400.student.nomoredomains.icu  
 Backend https://api.arsenii400.student.nomoredomains.icu
