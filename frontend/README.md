@@ -35,8 +35,6 @@
 * CSS
 * JavaScript
 * React.js
-* Node.js
-* Express.js
 * БЭМ Nested
 * Flexbox
 * Grid Layout
